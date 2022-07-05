@@ -8,7 +8,7 @@ async function convertPdf(file) {
   await convertapi
     .convert('pdf', { File: file })
     .then((result) => {
-      console.log(index, result.file.url);
+      console.log(result.file.url);
       result.file.save(`${currentDir}/${result.file.fileName}`);
     })
     .catch((err) => {
